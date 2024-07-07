@@ -1,0 +1,262 @@
+@mixin scrollspy-hide ($x: 0, $y: 2rem) {
+	transform: translate($x, $y);
+	opacity: 0;
+	transition: transform var(--scrollspy-duration) var(--easing), opacity var(--scrollspy-duration) var(--easing);
+}
+
+@mixin scrollspy-show {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+
+section {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+
+	padding: 15vh var(--site-padding);
+	min-height: 100vh;
+
+	header {
+		margin-bottom: var(--spacing-large);
+
+		p {
+			font-size: 1.2em;
+		}
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	nav {
+		@include list-inline;
+	}
+}
+
+html.js section {
+	header p {
+		@include scrollspy-hide;
+
+		transition-delay: 1.25s;
+	}
+
+	nav > * {
+		@include scrollspy-hide(2rem, 0);
+
+		transition-delay: 1.75s;
+
+		@for $i from 1 through 5 {
+			&:nth-child(#{$i}) {
+				transition-delay: #{1.75 + ($i * 0.1 - 0.1)}s;
+			}
+		}
+	}
+
+	&.in-view {
+		header p,
+		nav > * {
+			@include scrollspy-show;
+		}
+	}
+}
+
+// Work
+#work {
+	article {
+		@include card;
+
+		display: flex;
+		flex-direction: column;
+
+		> nav {
+			margin-top: auto;
+		}
+	}
+
+	> div {
+		display: grid;
+		gap: min(5vw, var(--spacing-large));
+		grid-auto-columns: 1fr;
+		perspective: 300px;
+
+		max-width: calc(100% + var(--site-padding) * 2);
+		padding: var(--spacing-large) var(--site-padding);
+		margin: calc(var(--spacing-large) * -1) calc(var(--site-padding) * -1);
+		overflow: auto;
+
+		> * {
+			grid-row: 1;
+		}
+	}
+}
+
+html.js #work {
+	article {
+		// @include threed-tilt;
+
+		opacity: 0;
+		transform-origin: 50% top;
+		transform: rotateX(-90deg);
+		transition: transform var(--scrollspy-duration) var(--easing), opacity var(--scrollspy-duration) var(--easing);
+	}
+
+	@for $i from 1 through 5 {
+		article:nth-child(#{$i}) {
+			transition-delay: #{1.5 + $i * 0.25 - 0.25}s;
+		}
+	}
+
+	&.in-view {
+		article {
+			opacity: 1;
+			transform: rotateX(0);
+		}
+	}
+}
+
+//contact
+#contact {
+	article {
+		@include card;
+
+		display: flex;
+		flex-direction: column;
+
+		> nav {
+			margin-top: auto;
+		}
+	}
+
+	> div {
+		display: grid;
+		gap: min(5vw, var(--spacing-large));
+		grid-auto-columns: 1fr;
+		perspective: 300px;
+
+		max-width: calc(100% + var(--site-padding) * 2);
+		padding: var(--spacing-large) var(--site-padding);
+		margin: calc(var(--spacing-large) * -1) calc(var(--site-padding) * -1);
+		overflow: auto;
+
+		> * {
+			grid-row: 1;
+		}
+	}
+}
+
+
+html.js #contact {
+	article {
+		// @include threed-tilt;
+
+		opacity: 0;
+		transform-origin: 50% top;
+		transform: rotateX(-90deg);
+		transition: transform var(--scrollspy-duration) var(--easing), opacity var(--scrollspy-duration) var(--easing);
+	}
+
+	@for $i from 1 through 5 {
+		article:nth-child(#{$i}) {
+			transition-delay: #{1.5 + $i * 0.25 - 0.25}s;
+		}
+	}
+
+	&.in-view {
+		article {
+			opacity: 1;
+			transform: rotateX(0);
+		}
+	}
+}
+
+// Play
+#play {
+	> div {
+		width: 100%;
+		display: flex;
+		gap: min(2vw, var(--spacing-large));
+		perspective: 100vw;
+
+		> * {
+			flex-grow: 1;
+		}
+	}
+
+	figure {
+		position: relative;
+		margin: 0;
+
+		&:hover {
+			z-index: 1;
+		}
+
+		// Ratio 1/1
+		&::before {
+			display: block;
+			content: "";
+			padding-bottom: 100%;
+		}
+
+		a {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			cursor: zoom-in;
+
+			transform: scale(1) rotateX(0);
+			transition: transform 1s var(--easing);
+
+			&:hover,
+			html.js &:hover {
+				transform: scale(1.5) rotateZ(-2.5deg);
+			}
+		}
+
+		&:nth-child(odd) a:hover,
+		html.js &:nth-child(odd) a:hover {
+			transform: scale(1.5) rotateZ(2.5deg);
+		}
+
+		img,
+		video {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+
+			object-fit: cover;
+
+			width: 100%;
+			height: 100%;
+
+			border: min(1vw, 1rem) solid white;
+			border-radius: 50%;
+			box-shadow: 0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
+		}
+	}
+}
+
+html.js #play {
+	figure {
+		transform: scale(0) rotateX(90deg);
+		transition: transform var(--scrollspy-duration) var(--easing);
+	}
+
+	@for $i from 1 through 10 {
+		figure:nth-child(#{$i}) {
+			transition-delay: #{1.5 + $i * 0.1 - 0.1}s;
+		}
+	}
+
+	&.in-view {
+		figure {
+			transform: scale(1) rotateX(0deg);
+		}
+	}
+}

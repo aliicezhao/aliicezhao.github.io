@@ -1,0 +1,48 @@
+// 3d background
+#bg {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -2;
+	margin: 0;
+	pointer-events: none;
+
+	canvas {
+		position: absolute;
+		left: 0;
+		top: 0;
+		outline: 0;
+
+		width: 100%;
+		height: 100%;
+
+		object-fit: cover;
+		object-position: center center;
+	}
+}
+
+// Toggle icon
+html.bg3d-disabled [data-toggle-bg3d] {
+	&::before {
+		content: "\e801"; // NOTE: Play Icon ▶
+	}
+}
+
+// In dev mode
+html.dev #bg {
+	pointer-events: all;
+	z-index: 1;
+	opacity: 0.75;
+}
+
+// Slide in when loaded
+html #bg {
+	transform: translateX(100%);
+	transition: transform 2.5s 2s var(--easing);
+}
+
+html.loaded #bg {
+	transform: translateX(0);
+}

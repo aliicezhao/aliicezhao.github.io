@@ -1,0 +1,322 @@
+<!doctype html>
+
+<html lang="en-GB" class="no-js">
+
+	<head>
+
+		<meta charset="utf8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Alice Zhao</title>
+		<meta name="description" content="Software Engineer and student from Nova Scotia">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://unpkg.com">
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="icon" href="assets/chess.jpg">
+
+		<script>
+			// JS class
+			document.documentElement.classList.remove('no-js');
+			document.documentElement.classList.add('js');
+
+			// Random theme on load
+			/* const themes = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+			const theme = themes[Math.floor(Math.random() * themes.length)];
+
+			document.documentElement.classList.add('theme-' + theme); */
+
+			// Actually no
+			document.documentElement.classList.add('theme-i');
+		</script>
+
+	</head>
+
+	<body>
+
+		<nav id="utils">
+			<!-- <a data-toggle-bg3d class="icon-pause">Toggle background animation</a>
+			<a href="?glitch=true" class="icon-emo-devil" title="Warning! Flashing images">Enable glitch mode 😬</a>
+			<a href="?beta=true" class="icon-emo-sunglasses">Enable v2.0 😂</a>
+			<a href="?dev=true" class="icon-terminal">Enable dev mode 🤓</a> -->
+			<a href="https://se-webring.xyz/" target="_blank" rel="noopener">
+			<svg width="35" height="40" viewBox="0 0 960 960" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M390.499 272.146V687.477C491.737 672.742 569.501 585.38 569.501 479.811C569.501 374.243 491.737 286.881 390.499 272.146ZM367.396 749.527C364.991 749.591 362.577 749.623 360.157 749.623C211.506 749.623 91 628.824 91 479.811C91 330.799 211.506 210 360.157 210C362.577 210 364.991 210.032 367.396 210.096C368.31 210.032 369.233 210 370.163 210H869V749.623H370.163C369.233 749.623 368.31 749.591 367.396 749.527ZM330.687 687.602V272.021C229.023 286.379 150.813 373.94 150.813 479.811C150.813 585.683 229.023 673.244 330.687 687.602ZM529.346 269.958H809.187V689.665H529.346C590.325 640.201 629.313 564.57 629.313 479.811C629.313 395.053 590.325 319.422 529.346 269.958Z" fill="currentColor"></path>	</svg>
+			</a>
+
+
+			<!-- Nostalgia 😂 -->
+			<a href="https://web.archive.org/web/20070517152212/http://exscale.se:80/" target="_blank" rel="noopener"></a>
+			<a href="https://web.archive.org/web/20070601155533/http://exscale.se/?debug=1" target="_blank" rel="noopener"></a>
+			<a href="https://web.archive.org/web/20101209155319/http://andreaslagerkvist.com/" target="_blank" rel="noopener"></a>
+			<a href="https://web.archive.org/web/20101205101247/http://a-framework.org/" target="_blank" rel="noopener"></a>
+			<a href="https://web.archive.org/web/20100117050408/http://demo.a-framework.org:80/" target="_blank" rel="noopener"></a>
+			<a href="https://web.archive.org/web/20110106162714/http://bugtracker.a-framework.org/" target="_blank" rel="noopener"></a>
+			<a href="https://web.archive.org/web/20161215141827/http://andreaslagerkvist.com/" target="_blank" rel="noopener"></a>
+			<a href="https://web.archive.org/web/20161009100200/http://sleekwp.com/" target="_blank" rel="noopener"></a>
+			<a href="https://web.archive.org/web/20161104061429/http://sleekwp.com/documentation/" target="_blank" rel="noopener"></a>
+		</nav>
+
+		<figure id="bg"></figure>
+
+		<nav id="themes">
+			<a data-set-theme="a">Theme A</a>
+			<a data-set-theme="b">Theme B</a>
+			<a data-set-theme="c">Theme C</a>
+			<a data-set-theme="d">Theme D</a>
+			<a data-set-theme="e">Theme E</a>
+			<!-- <a data-set-theme="f">Theme F</a> -->
+			<a data-set-theme="g">Theme G</a>
+			<!-- <a data-set-theme="h">Theme H</a> -->
+			<a data-set-theme="i">Theme I</a>
+			<!-- <a data-set-theme="j">Theme J</a> -->
+		</nav>
+
+		<nav id="navigation" data-highlight-visible>
+			<a href="#about">About</a>
+			<a href="#work">Work</a>
+			<a href="#play">Play</a>
+			<a href="#contact">Contact</a>
+			<a href="#end">The End</a>
+		</nav>
+
+		<main>
+
+			<section id="about"
+				data-auto-theme="i"
+				data-camera-pos='{"x":0.08587540781719324,"y":0.4493196965917127,"z":0.48457949209771856,"rx":-0.6751290685950414,"ry":0.3919465215545036,"rz":0.29680014653731734}'
+				data-camera='{"x":1.1847056087536485,"y":7.010292938286978,"z":0.963046259208372,"rx":-1.4130179137557504,"ry":0.1859036259639784,"rz":0.8600806979973583,"fov":6.016666666666666,"focus":"7","aperture":0.015}'
+			>
+
+				<header>
+
+					<h1>Hi! I'm Alice</h1>
+
+					<p>Software Engineering Student at the University of Waterloo.</p>
+
+				</header>
+				<nav>
+					<!-- <div data-aos="fade-in" data-aos-delay="800" class="socials aos-init aos-animate"><a class="social-icon-link github" href="https://github.com/asyf16" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><a class="social-icon-link linkedin" href="https://www.linkedin.com/in/aurora-shi-387656247/" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a><a class="social-icon-link download" href="https://drive.google.com/drive/folders/1LxYEXHacO-xeabSRKWcw-p50hZqi-ae6?usp=drive_link" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download" class="svg-inline--fa fa-download " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></a><a class="social-icon-link ring" href="https://se-webring.xyz/" target="_blank"><svg width="35" height="40" viewBox="0 0 960 960" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="35" height="40" fill="none"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M390.499 272.146V687.477C491.737 672.742 569.501 585.38 569.501 479.811C569.501 374.243 491.737 286.881 390.499 272.146ZM367.396 749.527C364.991 749.591 362.577 749.623 360.157 749.623C211.506 749.623 91 628.824 91 479.811C91 330.799 211.506 210 360.157 210C362.577 210 364.991 210.032 367.396 210.096C368.31 210.032 369.233 210 370.163 210H869V749.623H370.163C369.233 749.623 368.31 749.591 367.396 749.527ZM330.687 687.602V272.021C229.023 286.379 150.813 373.94 150.813 479.811C150.813 585.683 229.023 673.244 330.687 687.602ZM529.346 269.958H809.187V689.665H529.346C590.325 640.201 629.313 564.57 629.313 479.811C629.313 395.053 590.325 319.422 529.346 269.958Z" fill="#938ac8"></path></svg></a></div> -->
+					<a href="https://github.com/powerbuoy/sleek-ui/" target="_blank" rel="noopener" class="icon-github">GitHub</a>
+					<a href="https://github.com/powerbuoy/" target="_blank" rel="noopener" class="icon-linkedin-squared">Linkedin</a>
+					<a href="assets/AliceZhao-resume.pdf" target="_blank" rel="noopener" class="icon-database">Resume</a>
+					<a href="mailto:zhaoayz@gmail.com?subject=From%20website" target="_blank" rel="noopener" class="icon-stackoverflow">Email</a>
+				</nav>
+				  
+
+			</section>
+
+			<section id="work" data-auto-theme="g" data-camera-pos='{"x":1.6264026631799302,"y":1.2948229057672256,"z":5.986972351580601,"rx":-0.8697633991850208,"ry":-0.1868166573247362,"rz":-0.21659510346244576}' data-camera='{"x":2.446527366427204,"y":1.046735134204562,"z":5.33683840029425,"rx":-1.5707953683004692,"ry":-2.864323083995352e-7,"rz":-0.29038824447289097,"fov":25,"focus":1.1}'>
+
+				<header>
+
+					<h2>Work</h2>
+
+					<p>Here's some of my experience <br> Check out  <a href="assets/AliceZhao-resume.pdf">my resume!</a></p>
+
+				</header>
+
+				<div>
+
+					<article>
+
+						<h3>Eon Media</h3>
+
+						<p>AI/ML Software Engineer</p>
+
+						<nav>
+							<!-- <a href="https://github.com/powerbuoy/sleek/" target="_blank" rel="noopener" class="icon-github">GitHub</a> -->
+							<a href="https://eonmedia.ai/" target="_blank" rel="noopener" class="icon-globe">Website</a>
+						</nav>
+
+					</article>
+
+					<article>
+
+						<h3>Bloom Investing (YC W21)</h3>
+
+						<p>Augmented Reality Developer</p>
+
+						<nav>
+							<a href="https://bloomapp.com/" target="_blank" rel="noopener" class="icon-globe">GitHub</a>
+						</nav>
+
+					</article>
+
+					<article>
+
+						<h3>Cromarty Tennis Club Head Coach</h3>
+
+						<p>Managed 300+ members and 5 instructors</p>
+
+						<!-- <nav>
+							<a href="https://github.com/powerbuoy/sleek-ui/" target="_blank" rel="noopener" class="icon-github">GitHub</a>
+						</nav> -->
+
+					</article>
+
+					
+
+				</div>
+
+			</section>
+
+			<section id="play" data-auto-theme="e" data-camera-pos='{"x":4.015843278294994,"y":0.7427593056044219,"z":9.710916412580875,"rx":-0.9790715983750727,"ry":-1.0308008948462561,"rz":-0.9061688411006168}' data-camera='{"x":4.62887998620201,"y":2.1182156905778173,"z":10.050578087344649,"rx":-1.3729883552478588,"ry":-0.09290151699684711,"rz":-0.439619420635011,"fov":15,"focus":1.75}'>
+
+				<header>
+
+					<h2>Skills</h2>
+					<p>I enjoy picking up new skills in my spare time.<br>Here's some of the skills I've developed!</p>
+
+				</header>
+
+				<div>
+
+					<figure>
+						<a href="assets/C.png" target="_blank">
+							<img src="assets/C.png" alt="C/C++" width="200" height="300" loading="lazy">
+						</a>
+					</figure>
+
+					<figure>
+						<a href="assets/python.png" target="_blank">
+							<img src="assets/python.png" alt="Python" width="450" height="300" loading="lazy">
+						</a>
+					</figure>
+
+					<figure>
+						<a href="assets/javascript.webp" target="_blank">
+							<img src="assets/javascript.webp" alt="Javascript/Typescript/React/NodeJS" width="300" height="300" loading="lazy">
+						</a>
+					</figure>
+
+					<figure>
+						<a href="assets/p-80-java.webp" target="_blank">
+							<img src="assets/p-80-java.webp" alt="Java" width="400" height="300" loading="lazy">
+						</a>
+					</figure>
+
+					<figure>
+						<a href="assets/aws.webp" target="_blank">
+							<img src="assets/aws.webp" alt="Java" width="400" height="300" loading="lazy">
+						</a>
+					</figure>
+
+					<figure>
+						<a href="assets/react.svg" target="_blank">
+							<img src="assets/react.svg" alt="Java" width="400" height="300" loading="lazy">
+						</a>
+					</figure>
+
+					<figure>
+						<a href="assets/Git-Icon-Black.png" target="_blank">
+							<img src="assets/Git-Icon-Black.png" alt="Java" width="400" height="300" loading="lazy">
+						</a>
+					</figure>
+
+					<figure>
+						<a href="assets/Unity-Symbol.png" target="_blank">
+							<img src="assets/Unity-Symbol.png" alt="Java" width="400" height="300" loading="lazy">
+						</a>
+					</figure>
+
+					<!-- <figure>
+						<a href="assets/bulb.mp4" target="_blank" title="A lightbulb rolling on the floor">
+							<video autoplay loop muted disableRemotePlayback width="533" height="300" loading="lazy">
+								<source src="assets/bulb.mp4" type="video/mp4"></source>
+							</video>
+						</a>
+					</figure> -->
+
+				</div>
+
+			</section>
+
+			<section id="contact" data-auto-theme="a" data-camera-pos='{"x":1.2928716579423913,"y":0.8710942112817563,"z":14.08160151207296,"rx":-2.254564420415036,"ry":-0.9679905485695725,"rz":-2.3508026523748886}' data-camera='{"x":2.3869683008048312,"y":2.014168514244321,"z":14.802959849989419,"rx":-1.5707955483573386,"ry":-6.27792854923689e-7,"rz":-0.6786785492475481,"fov":15,"focus":2.0}'>
+
+				<header>
+
+					<h2>Projects</h2>
+
+					<p>I'm always working on something new</a><br> Check it out!</p>
+
+				</header>
+
+				<div>
+
+					<article>
+
+						<h3>Autonomous Tank</h3>
+
+						<p>Featured on OpenCV Live</p>
+
+						<nav>
+							<a href="https://github.com/aliicezhao/self-driving-tank" target="_blank" rel="noopener" class="icon-github">GitHub</a>
+						</nav>
+
+					</article>
+
+					<article>
+
+						<h3>Augmented Reality Developer</h3>
+
+						<p>3 Billion Impressions</p>
+
+						<nav>
+							<a href="https://github.com/aliicezhao/AR-Projects" target="_blank" rel="noopener" class="icon-github">GitHub</a>
+						</nav>
+
+					</article>
+
+					<article>
+
+						<h3>Cromarty Club Website</h3>
+
+						<p></p>
+
+						<nav>
+							<a href="https://github.com/aliicezhao/cromarty-website" target="_blank" rel="noopener" class="icon-github">GitHub</a>
+						</nav>
+
+					</article>
+
+					
+
+				</div>
+
+			</section>
+
+			<section id="end" data-auto-theme="b" data-camera-pos='{"x":-0.10642392173444505,"y":0.1798439109093774,"z":19.628076613444538,"rx":-2.7613242127834337,"ry":-0.5228655690770228,"rz":-2.9445739092095806}' data-camera='{"x":-0.021805611932740193,"y":0.49084505944223955,"z":19.842513106308985,"rx":-1.891969499602399,"ry":-0.12521842523150759,"rz":-2.78247423183279,"fov":15,"focus":1.0}'>
+
+				<header>
+
+					<h2>Contact</h2>
+
+					<p><a href="mailto:zhaoayz@gmail.com?subject=From%20website">Write me an e-mail!</a><br>Or find me online:</p>
+
+					<a href="https://github.com/aliicezhao/" target="_blank" rel="noopener" class="icon-github">GitHub</a>
+					<a href="https://www.linkedin.com/in/aliicezhao/" target="_blank" rel="noopener" class="icon-linkedin-squared">Linkedin</a>
+
+				</header>
+
+				<nav>
+					<a href="#about" class="icon-up">Go back to the top</a>
+				</nav>
+
+			</section>
+
+		</main>
+
+		<!-- <aside id="performance-notice">
+			<p>Your framerate is low.<br>You may want to pause the 3D background using the button in the top left corner.</p>
+		</aside> -->
+
+		<div id="fps"><span data-fps></span>fps</div>
+
+		<script src="https://unpkg.com/splitting@1.0.6/dist/splitting.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+		<script type="module" src="js/app.js"></script>
+
+	</body>
+
+</html>
