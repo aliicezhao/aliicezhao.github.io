@@ -1,10 +1,5 @@
 'use strict';
 
-// Function to force refresh
-function forcePageRefresh() {
-    location.reload();
-}
-
 const getParams = new URLSearchParams(window.location.search);
 
 ///////
@@ -119,13 +114,6 @@ if (!isMobileDevice()) {
         document.getElementById('performance-notice').classList.remove('active');
     });
 
-    // Force page refresh after the 3D content is fully loaded
-    window.addEventListener('3DContentLoaded', () => {
-        forcePageRefresh();
-    });
-
-    // Optionally, you could use a timeout if there's no specific event
-    // setTimeout(forcePageRefresh, 5000); // Adjust the timeout as necessary
 }
 
 ////////////
